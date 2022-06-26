@@ -12,8 +12,27 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    
+    if (playerSelection.toUpperCase() === 'ROCK' && computerSelection === 'ROCK') {
+        return "Draw! ROCK equals ROCK";
+    } else if (playerSelection.toUpperCase() === 'ROCK' && computerSelection === 'PAPER') {
+        return "You Lose! PAPER beats ROCK";
+    } else if (playerSelection.toUpperCase() === 'ROCK' && computerSelection === 'SCISSORS') {
+        return "You Win! ROCK beats SCISSORS";
+    } else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection === 'ROCK') {
+        return "You Win! PAPER beats ROCK";
+    } else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection === 'PAPER') {
+        return "Draw! PAPER equals PAPER";
+    } else if (playerSelection.toUpperCase() === 'PAPER' && computerSelection === 'SCISSORS') {
+        return "You Lose! SCISSORS beats PAPER";
+    } else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection === 'ROCK') {
+        return "You Lose! ROCK beats SCISSORS";
+    } else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection === 'PAPER') {
+        return "You Win! SCISSORS beats PAPER";
+    } else if (playerSelection.toUpperCase() === 'SCISSORS' && computerSelection === 'SCISSORS') {
+        return "Draw! SCISSORS equals SCISSORS";
+    }
 }
 
 const playerSelection = "rock";
 const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
