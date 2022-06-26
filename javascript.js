@@ -33,6 +33,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+function game(playRound) {
+    let playerSelection;
+    let computerSelection;
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt("Choose ROCK, PAPER, or SCISSORS.");
+        computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    }
+}
+
+game(playRound);
